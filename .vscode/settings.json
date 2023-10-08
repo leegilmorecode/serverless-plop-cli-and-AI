@@ -1,0 +1,9 @@
+{
+  "files.exclude": {
+    "*/src/**/*.js": true,
+    "*/plopfile.js": true,
+    "*/index.js": true,
+    "**/*.map": true,
+    "**/*.d.ts": true
+  }
+}

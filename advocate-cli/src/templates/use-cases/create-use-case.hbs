@@ -1,0 +1,19 @@
+import { {{pascalCase name}}Dto } from '@dto/{{kebabCase name}}';
+import { logger, schemaValidator } from '@shared/index';
+import { schema } from '@schemas/{{kebabCase useCaseSchemaName}}';
+
+export async function {{camelCase name}}UseCase(
+  {{camelCase useCaseSchemaName}}: {{pascalCase name}}Dto
+): Promise<{{pascalCase name}}Dto> {
+  const {{camelCase useCaseSchemaName}}Dto: {{pascalCase name}}Dto = {
+      ...{{camelCase useCaseSchemaName}},
+  }
+
+  schemaValidator(schema, {{camelCase useCaseSchemaName}});
+
+  logger.info(
+    `{{camelCase useCaseSchemaName}} created`
+  );
+
+  return {{camelCase useCaseSchemaName}}Dto;
+}

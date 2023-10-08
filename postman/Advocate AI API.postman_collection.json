@@ -1,0 +1,39 @@
+{
+  "info": {
+    "_postman_id": "a718b648-3026-4118-b2d3-8b1aaa3b7384",
+    "name": "Advocate AI API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "Action Prompt",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"modelId\": \"anthropic.claude-v2\",\n  \"contentType\": \"application/json\",\n  \"accept\": \"*/*\",\n  \"prompt\": \"Please provide an example payload.\",\n  \"temperature\": 0.5,\n  \"top_p\": 0.8,\n  \"top_k\": 5,\n  \"max_tokens_to_sample\": 400,\n  \"stop_sequences\": []\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{ai-prompt-uri}}/prod/prompts/",
+          "protocol": "https",
+          "host": ["{{ai-prompt-uri}}"],
+          "path": ["prod", "prompts", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "ai-prompt-uri",
+      "value": "your-value.execute-api.us-east-1.amazonaws.com"
+    }
+  ]
+}
